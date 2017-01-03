@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainConstraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teamproblemsolver.facebookdemo.MainActivity"
+    android:background="#355796">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/v_guideline1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1015625"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="39dp"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/v_guideline2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="349dp"
+        app:layout_constraintGuide_percent="0.9088542"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:id="@+id/h_guideline1"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="61dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.107583776"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/h_guideline2"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="174dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.3068783"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/h_guideline3"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="228dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.4021164"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/facebook_cover"
+        android:id="@+id/fbCoverImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/h_guideline2"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/facebook_icon"
+        android:id="@+id/fbLogoImageView"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/h_guideline3"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/emailEditText"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        android:hint="Email or Phone"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/h_guideline3"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textColorLink="@android:color/white"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pswEditText"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:hint="Password"/>
+
+    <TextView
+        android:text="Bahasa Malaysia &#8226; 中文(中国) &#8226; More..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/langTextView"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/h_guideline2"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:text="Forgot Password?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgotPswTextView"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:text="Log In"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginButton"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/pswEditText"
+        android:background="#4867a0"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        android:layout_marginTop="4dp"
+        android:enabled="false"/>
+
+    <Button
+        android:text="Create New Facebook Account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/newAccountButton"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        android:background="@drawable/create_acc_button_background"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/facebook_icon"
+        tools:layout_editor_absoluteY="90dp"
+        tools:layout_editor_absoluteX="164dp"
+        android:id="@+id/fbLogoStaticImageView"
+        app:layout_constraintLeft_toRightOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/h_guideline1"/>
+
+</android.support.constraint.ConstraintLayout>
